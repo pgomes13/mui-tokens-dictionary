@@ -33,10 +33,12 @@ Add a new design token to this repository. Arguments: $ARGUMENTS
    - Add `'tokens/<name>.json'` to `baseTokenSources` array in `config.ts`
    - Add an import and entry to `site/src/tokens/index.ts` matching the existing pattern
 
-6. **Run the build** to verify no Style Dictionary errors:
+6. **Run the builds** to verify no errors:
    ```bash
    npm run build
+   cd site && npm run build
    ```
+   Both must pass. The root build validates Style Dictionary; the site build confirms the token JSON is importable and the app compiles.
 
 7. **Report** the generated names so the user can use them immediately:
    - CSS variable: `--mui-<kebab-path>` (DEFAULT segments stripped)
