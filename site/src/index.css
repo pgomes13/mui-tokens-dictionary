@@ -104,7 +104,7 @@ button.primary:disabled { opacity: 0.6; cursor: not-allowed; }
 .copy-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
 
 .copy-chip {
-  display: block; width: 100%; text-align: left;
+  display: inline-block; width: auto; text-align: left;
   padding: 4px 8px; font-size: 12px;
   border: 1px solid var(--border); border-radius: 4px;
   background: var(--bg); color: var(--text);

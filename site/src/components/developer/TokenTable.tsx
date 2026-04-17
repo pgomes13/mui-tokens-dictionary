@@ -1,4 +1,4 @@
-import { CopyButton } from '@/components/common/CopyButton'
+import { CopyChip } from '@/components/common/CopyChip'
 import type { FlatToken } from '@/lib/tokenUtils'
 import { toCssVar, toJsName } from '@/lib/tokenUtils'
 
@@ -25,14 +25,8 @@ export function TokenTable({ tokens, selectedToken, onSelect }: Props) {
         const isSelected = selectedToken?.path.join('.') === t.path.join('.') && selectedToken?.fileKey === t.fileKey
         return (
           <div key={`${t.fileKey}:${t.path.join('.')}`} className="dev-token-row" onClick={() => onSelect?.(t)}>
-            <span className="css-var">
-              <code>{cssVar}</code>
-              <CopyButton value={cssVar} label="Copy" />
-            </span>
-            <span className="js-name">
-              <code>{jsName}</code>
-              <CopyButton value={jsName} label="Copy" />
-            </span>
+            <CopyChip value={cssVar} mono />
+            <CopyChip value={jsName} mono />
             <span className="token-value">
               {t.type === 'color' && <span className="color-dot" style={{ backgroundColor: t.value }} />}
               {t.value}

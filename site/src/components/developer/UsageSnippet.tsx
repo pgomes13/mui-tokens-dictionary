@@ -1,4 +1,4 @@
-import { CopyButton } from '@/components/common/CopyButton'
+import { CopyChip } from '@/components/common/CopyChip'
 import { toCssVar, toJsName } from '@/lib/tokenUtils'
 import type { FlatToken } from '@/lib/tokenUtils'
 
@@ -19,14 +19,14 @@ export function UsageSnippet({ token }: Props) {
       <div className="snippet-block">
         <div className="snippet-header">
           <span>CSS</span>
-          <CopyButton value={cssSnippet} label="Copy" />
+          <CopyChip value={cssSnippet} label="Copy" />
         </div>
         <pre><code>{cssSnippet}</code></pre>
       </div>
       <div className="snippet-block">
         <div className="snippet-header">
           <span>JavaScript / TypeScript</span>
-          <CopyButton value={jsSnippet} label="Copy" />
+          <CopyChip value={jsSnippet} label="Copy" />
         </div>
         <pre><code>{jsSnippet}</code></pre>
       </div>
