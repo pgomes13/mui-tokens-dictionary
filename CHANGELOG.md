@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.0.0...v1.0.1) (2026-04-17)
+
+
+### Bug Fixes
+
+* trigger site deploy on release tag, not direct push to main ([9143391](https://github.com/pgomes13/mui-tokens-dictionary/commit/9143391140ce4a0e9033862a9570e536e7bcf7c6))
+
 # 1.0.0 (2026-04-17)
 
 
