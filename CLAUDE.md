@@ -69,9 +69,11 @@ React + Vite + TypeScript app deployed to GitHub Pages at `https://pgomes13.gith
 
 2. `.github/workflows/deploy-site.yml` — triggers via `workflow_run` after the "Release" workflow completes successfully (or manually via `workflow_dispatch`). Checks out `main` (with `ref: main` to get the version-bumped `package.json` committed by semantic-release), runs root token build, builds the site, and pushes `site/dist/` to the `gh-pages` branch via `peaceiris/actions-gh-pages`.
 
+3. `.github/workflows/publish-npm.yml` — **manual only** (`workflow_dispatch`). Accepts an optional tag input (defaults to the latest release tag). Checks out that tag, builds tokens, and runs `npm publish`. Requires `NPM_TOKEN` secret in GitHub repo settings.
+
 **Why `workflow_run` (not `push: tags`)?** Workflows triggered by `GITHUB_TOKEN` (e.g., semantic-release's tag push and chore commit) do not cascade to other workflows. `workflow_run` fires after the named workflow finishes, regardless of how it was triggered.
 
-semantic-release is configured in `.releaserc.json` with `npmPublish: false`.
+semantic-release is configured in `.releaserc.json` with `npmPublish: false` — publishing to npm is always manual.
 
 After the first deploy, enable Pages in repo Settings → Pages → Source: `gh-pages` branch.
 
@@ -82,6 +84,26 @@ After the first deploy, enable Pages in repo Settings → Pages → Source: `gh-
 | `fix:` | patch — `1.0.0` → `1.0.1` |
 | `feat:` | minor — `1.0.0` → `1.1.0` |
 | `feat!:` or `BREAKING CHANGE:` | major — `1.0.0` → `2.0.0` |
+
+### npm package
+
+The package is published to npm as `mui-tokens-dictionary`. Consumers install with `npm install mui-tokens-dictionary` and use:
+- `import 'mui-tokens-dictionary/tokens.css'` — CSS custom properties
+- `import { MuiPalettePrimaryMain } from 'mui-tokens-dictionary'` — JS/TS named exports
+
+The `package.json` `exports` field maps `.` → `build/tokens.js` and `./tokens.css` → `build/tokens.css`. Only the `build/` artifacts are included in the published package (`files` field).
+
+## Skills
+
+Three slash commands are available in `skills/`:
+
+| Skill | Purpose |
+|-------|---------|
+| `/add-token` | Add a new token to a JSON source file; wires up new category files if needed |
+| `/edit-token` | Update `$value` / `$type` on an existing token |
+| `/remove-token` | Remove a token; cleans up empty parent objects; greps site for hardcoded references first |
+
+All three run `npm run build` + `cd site && npm run build` and remind the user to commit and push.
 
 ## Token file conventions
 
