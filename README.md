@@ -11,9 +11,16 @@ A design token pipeline that converts MUI-aligned JSON tokens into CSS custom pr
 ## Quick Start
 
 ```bash
-npm install
-npm run build
+make install
+make build
 ```
+
+| Command | Description |
+|---------|-------------|
+| `make install` | Install dependencies |
+| `make build` | Build token outputs |
+| `make clean` | Remove `build/` artifacts |
+| `make rebuild` | Clean then build |
 
 Output is written to `build/`:
 
