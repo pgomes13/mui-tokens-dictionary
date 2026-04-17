@@ -7,12 +7,13 @@ export interface TokenData {
   byCategory: Map<string, FlatToken[]>
 }
 
-export function useTokenData(): TokenData {
+export function useTokenData(theme: 'light' | 'dark'): TokenData {
   return useMemo(() => {
-    const allTokens = Object.entries(rawTokenFiles).flatMap(([fileKey, obj]) =>
-      flattenTokens(obj, fileKey)
-    )
+    const excluded = theme === 'light' ? 'palette/dark' : 'palette/light'
+    const allTokens = Object.entries(rawTokenFiles)
+      .filter(([fileKey]) => fileKey !== excluded)
+      .flatMap(([fileKey, obj]) => flattenTokens(obj, fileKey))
     const byCategory = groupByCategory(allTokens)
     return { allTokens, byCategory }
-  }, [])
+  }, [theme])
 }

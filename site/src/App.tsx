@@ -9,8 +9,8 @@ import { useTheme } from '@/hooks/useTheme'
 export type Theme = 'light' | 'dark'
 
 export default function App() {
-  const data = useTokenData()
-  const { theme, toggleTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
+  const data = useTokenData(theme)
 
   const [view, setView] = useState<'designer' | 'developer'>('designer')
   const [activeCategory, setActiveCategory] = useState('palette')
@@ -26,7 +26,7 @@ export default function App() {
         view={view}
         onViewChange={handleViewChange}
         theme={theme}
-        onThemeToggle={toggleTheme}
+        onThemeChange={setTheme}
       />
       <div className="app-body">
         <Sidebar view={view} activeCategory={activeCategory} onCategoryClick={setActiveCategory} />

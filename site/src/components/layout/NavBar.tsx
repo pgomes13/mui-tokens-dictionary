@@ -4,10 +4,10 @@ interface Props {
   view: 'designer' | 'developer'
   onViewChange: (v: 'designer' | 'developer') => void
   theme: Theme
-  onThemeToggle: () => void
+  onThemeChange: (t: Theme) => void
 }
 
-export function NavBar({ view, onViewChange, theme, onThemeToggle }: Props) {
+export function NavBar({ view, onViewChange, theme, onThemeChange }: Props) {
   return (
     <nav className="navbar">
       <span className="navbar-brand">MUI Token Dictionary</span>
@@ -20,9 +20,13 @@ export function NavBar({ view, onViewChange, theme, onThemeToggle }: Props) {
         </button>
       </div>
       <div className="navbar-actions">
-        <button className="icon-btn" onClick={onThemeToggle} title="Toggle theme">
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
+        <div className="theme-toggle">
+          <span className="theme-label">Theme</span>
+          <div className="view-toggle">
+            <button className={theme === 'light' ? 'active' : ''} onClick={() => onThemeChange('light')}>Light</button>
+            <button className={theme === 'dark' ? 'active' : ''} onClick={() => onThemeChange('dark')}>Dark</button>
+          </div>
+        </div>
       </div>
     </nav>
   )
