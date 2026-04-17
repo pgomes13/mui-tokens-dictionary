@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavBar } from '@/components/layout/NavBar'
 import { Sidebar } from '@/components/layout/Sidebar'
+import { Footer } from '@/components/layout/Footer'
 import { DesignerPage } from '@/pages/DesignerPage'
 import { DeveloperPage } from '@/pages/DeveloperPage'
 import { useTokenData } from '@/hooks/useTokenData'
@@ -35,6 +36,7 @@ export default function App() {
           : <DeveloperPage data={data} activeCategory={activeCategory} />
         }
       </div>
+      <Footer />
     </div>
   )
 }

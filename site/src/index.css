@@ -241,3 +241,10 @@ button.primary:disabled { opacity: 0.6; cursor: not-allowed; }
 
 /* ── Empty state ───────────────────────────────────────────────── */
 .empty { color: var(--text-secondary); padding: 24px; text-align: center; }
+
+/* ── Footer ────────────────────────────────────────────────────── */
+.footer {
+  padding: 12px 24px; text-align: right;
+  border-top: 1px solid var(--border); background: var(--surface);
+  font-size: 12px;
+}
