@@ -4,9 +4,10 @@ import type { FlatToken } from '@/lib/tokenUtils'
 
 interface Props {
   token: FlatToken | null
+  onClose: () => void
 }
 
-export function UsageSnippet({ token }: Props) {
+export function UsageSnippet({ token, onClose }: Props) {
   if (!token) return null
   const cssVar = toCssVar(token.path)
   const jsName = toJsName(token.path)
@@ -14,21 +15,27 @@ export function UsageSnippet({ token }: Props) {
   const jsSnippet = `import { ${jsName} } from './build/tokens.js'\n\n// ${jsName} = "${token.value}"`
 
   return (
-    <div className="usage-snippet">
-      <h3>Usage</h3>
-      <div className="snippet-block">
-        <div className="snippet-header">
-          <span>CSS</span>
-          <CopyChip value={cssSnippet} label="Copy" />
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal usage-modal" onClick={e => e.stopPropagation()}>
+        <div className="usage-modal-header">
+          <h2>Usage</h2>
+          <button className="icon-btn" onClick={onClose}>✕</button>
         </div>
-        <pre><code>{cssSnippet}</code></pre>
-      </div>
-      <div className="snippet-block">
-        <div className="snippet-header">
-          <span>JavaScript / TypeScript</span>
-          <CopyChip value={jsSnippet} label="Copy" />
+        <p className="token-path">{token.path.filter(s => s !== 'DEFAULT').join('.')}</p>
+        <div className="snippet-block">
+          <div className="snippet-header">
+            <span>CSS</span>
+            <CopyChip value={cssSnippet} label="Copy" />
+          </div>
+          <pre><code>{cssSnippet}</code></pre>
         </div>
-        <pre><code>{jsSnippet}</code></pre>
+        <div className="snippet-block">
+          <div className="snippet-header">
+            <span>JavaScript / TypeScript</span>
+            <CopyChip value={jsSnippet} label="Copy" />
+          </div>
+          <pre><code>{jsSnippet}</code></pre>
+        </div>
       </div>
     </div>
   )

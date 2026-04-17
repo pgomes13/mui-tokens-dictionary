@@ -36,10 +36,8 @@ export function DeveloperPage({ data, activeCategory }: Props) {
         <h1>Token Reference</h1>
         <SearchBar value={search} onChange={setSearch} />
       </div>
-      <div className="dev-layout">
-        <TokenTable tokens={filtered} selectedToken={selectedToken} onSelect={setSelectedToken} />
-        <UsageSnippet token={selectedToken} />
-      </div>
+      <TokenTable tokens={filtered} selectedToken={selectedToken} onSelect={setSelectedToken} />
+      <UsageSnippet token={selectedToken} onClose={() => setSelectedToken(null)} />
     </main>
   )
 }
