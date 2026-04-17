@@ -12,7 +12,7 @@ export function UsageSnippet({ token, onClose }: Props) {
   const cssVar = toCssVar(token.path)
   const jsName = toJsName(token.path)
   const cssSnippet = `.element {\n  /* ${token.path.filter(s => s !== 'DEFAULT').join('.')} */\n  property: var(${cssVar});\n}`
-  const jsSnippet = `import { ${jsName} } from './build/tokens.js'\n\n// ${jsName} = "${token.value}"`
+  const jsSnippet = `import { ${jsName} } from 'mui-tokens-dictionary'\n\n// ${jsName} = "${token.value}"`
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
