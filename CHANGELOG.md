@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.2.1...v1.2.2) (2026-04-17)
+
+
+### Bug Fixes
+
+* center version link in footer ([15cf6d3](https://github.com/pgomes13/mui-tokens-dictionary/commit/15cf6d3289ec56f74755a9b647688a8a06a516da))
+
 ## [1.2.1](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.2.0...v1.2.1) (2026-04-17)
 
 
