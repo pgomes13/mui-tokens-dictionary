@@ -3,10 +3,9 @@ import type { FlatToken } from '@/lib/tokenUtils'
 
 interface Props {
   tokens: FlatToken[]
-  onEdit?: (token: FlatToken) => void
 }
 
-export function SpacingSection({ tokens, onEdit }: Props) {
+export function SpacingSection({ tokens }: Props) {
   return (
     <section id="spacing" className="token-section">
       <h2>Spacing</h2>
@@ -22,7 +21,6 @@ export function SpacingSection({ tokens, onEdit }: Props) {
               <span className="spacing-value">{t.value}</span>
               <div className="token-actions">
                 <CopyButton value={t.value} label="Value" />
-                {onEdit && <button className="edit-btn" onClick={() => onEdit(t)}>Edit</button>}
               </div>
             </div>
           )

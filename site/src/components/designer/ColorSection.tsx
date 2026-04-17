@@ -3,7 +3,6 @@ import type { FlatToken } from '@/lib/tokenUtils'
 
 interface Props {
   tokens: FlatToken[]
-  onEdit?: (token: FlatToken) => void
 }
 
 function groupBySubcategory(tokens: FlatToken[]): Map<string, FlatToken[]> {
@@ -17,7 +16,7 @@ function groupBySubcategory(tokens: FlatToken[]): Map<string, FlatToken[]> {
   return map
 }
 
-export function ColorSection({ tokens, onEdit }: Props) {
+export function ColorSection({ tokens }: Props) {
   const groups = groupBySubcategory(tokens.filter(t => t.type === 'color'))
   return (
     <section id="palette" className="token-section">
@@ -27,7 +26,7 @@ export function ColorSection({ tokens, onEdit }: Props) {
           <h3>{group.charAt(0).toUpperCase() + group.slice(1)}</h3>
           <div className="swatches-grid">
             {groupTokens.map(t => (
-              <ColorSwatch key={t.path.join('.')} token={t} onEdit={onEdit} />
+              <ColorSwatch key={t.path.join('.')} token={t} />
             ))}
           </div>
         </div>

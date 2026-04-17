@@ -4,18 +4,15 @@ import { SpacingSection } from '@/components/designer/SpacingSection'
 import { SimpleTokenSection } from '@/components/designer/SimpleTokenSection'
 import { downloadW3CExport } from '@/lib/w3cExport'
 import { rawTokenFiles } from '@/tokens'
-import type { FlatToken } from '@/lib/tokenUtils'
 import type { TokenData } from '@/hooks/useTokenData'
 
 interface Props {
   data: TokenData
   activeCategory: string
-  onEdit?: (token: FlatToken) => void
 }
 
-export function DesignerPage({ data, activeCategory, onEdit }: Props) {
+export function DesignerPage({ data, activeCategory }: Props) {
   const { byCategory } = data
-  const show = (cat: string) => activeCategory === cat || activeCategory === 'palette'
 
   return (
     <main className="main-content">
@@ -27,27 +24,27 @@ export function DesignerPage({ data, activeCategory, onEdit }: Props) {
       </div>
 
       {(activeCategory === 'palette') &&
-        <ColorSection tokens={[...(byCategory.get('palette') ?? [])]} onEdit={onEdit} />
+        <ColorSection tokens={[...(byCategory.get('palette') ?? [])]} />
       }
       {activeCategory === 'typography' &&
-        <TypographySection tokens={byCategory.get('typography') ?? []} onEdit={onEdit} />
+        <TypographySection tokens={byCategory.get('typography') ?? []} />
       }
       {activeCategory === 'spacing' &&
-        <SpacingSection tokens={byCategory.get('spacing') ?? []} onEdit={onEdit} />
+        <SpacingSection tokens={byCategory.get('spacing') ?? []} />
       }
       {activeCategory === 'shape' &&
-        <SimpleTokenSection id="shape" title="Shape" tokens={byCategory.get('shape') ?? []} onEdit={onEdit}
+        <SimpleTokenSection id="shape" title="Shape" tokens={byCategory.get('shape') ?? []}
           renderPreview={t => <div style={{ width: 24, height: 24, background: '#1976d2', borderRadius: t.value }} />}
         />
       }
       {activeCategory === 'breakpoints' &&
-        <SimpleTokenSection id="breakpoints" title="Breakpoints" tokens={byCategory.get('breakpoints') ?? []} onEdit={onEdit} />
+        <SimpleTokenSection id="breakpoints" title="Breakpoints" tokens={byCategory.get('breakpoints') ?? []} />
       }
       {activeCategory === 'zIndex' &&
-        <SimpleTokenSection id="zIndex" title="Z-Index" tokens={byCategory.get('zIndex') ?? []} onEdit={onEdit} />
+        <SimpleTokenSection id="zIndex" title="Z-Index" tokens={byCategory.get('zIndex') ?? []} />
       }
       {activeCategory === 'transitions' &&
-        <SimpleTokenSection id="transitions" title="Transitions" tokens={byCategory.get('transitions') ?? []} onEdit={onEdit} />
+        <SimpleTokenSection id="transitions" title="Transitions" tokens={byCategory.get('transitions') ?? []} />
       }
     </main>
   )

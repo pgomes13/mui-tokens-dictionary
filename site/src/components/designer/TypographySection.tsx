@@ -4,7 +4,6 @@ import { toCssVar } from '@/lib/tokenUtils'
 
 interface Props {
   tokens: FlatToken[]
-  onEdit?: (token: FlatToken) => void
 }
 
 const VARIANT_ORDER = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'button', 'caption', 'overline']
@@ -21,7 +20,7 @@ function buildVariantStyle(name: string, variantTokens: FlatToken[]): React.CSSP
   }
 }
 
-export function TypographySection({ tokens, onEdit }: Props) {
+export function TypographySection({ tokens }: Props) {
   const variantTokens = tokens.filter(t => VARIANT_ORDER.includes(t.path[1]))
   const baseTokens = tokens.filter(t => !VARIANT_ORDER.includes(t.path[1]))
 
@@ -48,7 +47,6 @@ export function TypographySection({ tokens, onEdit }: Props) {
             <div className="token-actions">
               <CopyButton value={t.value} label="Value" />
               <CopyButton value={toCssVar(t.path)} label="CSS" />
-              {onEdit && <button className="edit-btn" onClick={() => onEdit(t)}>Edit</button>}
             </div>
           </div>
         ))}

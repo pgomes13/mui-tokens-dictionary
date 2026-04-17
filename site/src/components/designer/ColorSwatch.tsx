@@ -4,10 +4,9 @@ import { toCssVar } from '@/lib/tokenUtils'
 
 interface Props {
   token: FlatToken
-  onEdit?: (token: FlatToken) => void
 }
 
-export function ColorSwatch({ token, onEdit }: Props) {
+export function ColorSwatch({ token }: Props) {
   const cssVar = toCssVar(token.path)
   return (
     <div className="color-swatch">
@@ -18,7 +17,6 @@ export function ColorSwatch({ token, onEdit }: Props) {
         <div className="swatch-actions">
           <CopyButton value={token.value} label="Hex" />
           <CopyButton value={cssVar} label="CSS" />
-          {onEdit && <button className="edit-btn" onClick={() => onEdit(token)}>Edit</button>}
         </div>
       </div>
     </div>

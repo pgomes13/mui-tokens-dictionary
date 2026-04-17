@@ -9,10 +9,9 @@ import type { TokenData } from '@/hooks/useTokenData'
 interface Props {
   data: TokenData
   activeCategory: string
-  onEdit?: (token: FlatToken) => void
 }
 
-export function DeveloperPage({ data, activeCategory, onEdit }: Props) {
+export function DeveloperPage({ data, activeCategory }: Props) {
   const [search, setSearch] = useState('')
   const [selectedToken, setSelectedToken] = useState<FlatToken | null>(null)
 
@@ -31,11 +30,6 @@ export function DeveloperPage({ data, activeCategory, onEdit }: Props) {
       })
     : baseTokens
 
-  const handleEdit = (token: FlatToken) => {
-    setSelectedToken(token)
-    onEdit?.(token)
-  }
-
   return (
     <main className="main-content">
       <div className="page-header">
@@ -43,7 +37,7 @@ export function DeveloperPage({ data, activeCategory, onEdit }: Props) {
         <SearchBar value={search} onChange={setSearch} />
       </div>
       <div className="dev-layout">
-        <TokenTable tokens={filtered} onEdit={handleEdit} />
+        <TokenTable tokens={filtered} onSelect={setSelectedToken} />
         <UsageSnippet token={selectedToken} />
       </div>
     </main>

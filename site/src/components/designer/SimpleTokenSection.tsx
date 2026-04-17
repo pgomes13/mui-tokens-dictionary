@@ -6,11 +6,10 @@ interface Props {
   id: string
   title: string
   tokens: FlatToken[]
-  onEdit?: (token: FlatToken) => void
   renderPreview?: (token: FlatToken) => React.ReactNode
 }
 
-export function SimpleTokenSection({ id, title, tokens, onEdit, renderPreview }: Props) {
+export function SimpleTokenSection({ id, title, tokens, renderPreview }: Props) {
   return (
     <section id={id} className="token-section">
       <h2>{title}</h2>
@@ -29,7 +28,6 @@ export function SimpleTokenSection({ id, title, tokens, onEdit, renderPreview }:
             <div className="token-actions">
               <CopyButton value={t.value} label="Value" />
               <CopyButton value={toCssVar(t.path)} label="CSS" />
-              {onEdit && <button className="edit-btn" onClick={() => onEdit(t)}>Edit</button>}
             </div>
           </div>
         ))}
