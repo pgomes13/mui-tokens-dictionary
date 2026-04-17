@@ -1,4 +1,4 @@
-import { CopyButton } from '@/components/common/CopyButton'
+import { CopyChip } from '@/components/common/CopyChip'
 import type { FlatToken } from '@/lib/tokenUtils'
 
 interface Props {
@@ -18,10 +18,7 @@ export function SpacingSection({ tokens }: Props) {
               <div className="spacing-bar-wrap">
                 <div className="spacing-bar" style={{ width: `${Math.min(px, 160)}px` }} />
               </div>
-              <span className="inline-copy">
-                <span className="spacing-value">{t.value}</span>
-                <CopyButton value={t.value} label="Copy" />
-              </span>
+              <CopyChip value={t.value} mono />
             </div>
           )
         })}

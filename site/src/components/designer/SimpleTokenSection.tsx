@@ -1,4 +1,4 @@
-import { CopyButton } from '@/components/common/CopyButton'
+import { CopyChip } from '@/components/common/CopyChip'
 import type { FlatToken } from '@/lib/tokenUtils'
 import { toCssVar } from '@/lib/tokenUtils'
 
@@ -26,14 +26,8 @@ export function SimpleTokenSection({ id, title, tokens, renderPreview }: Props) 
             <div key={t.path.join('.')} className="token-row">
               <span className="token-name">{t.path.filter(s => s !== 'DEFAULT').join('.')}</span>
               {renderPreview && <span className="token-preview">{renderPreview(t)}</span>}
-              <span className="inline-copy">
-                <span className="token-value">{t.value}</span>
-                <CopyButton value={t.value} label="Copy" />
-              </span>
-              <span className="inline-copy">
-                <code className="token-value">{cssVar}</code>
-                <CopyButton value={cssVar} label="Copy" />
-              </span>
+              <CopyChip value={t.value} mono />
+              <CopyChip value={cssVar} mono />
             </div>
           )
         })}

@@ -103,6 +103,17 @@ button.primary:disabled { opacity: 0.6; cursor: not-allowed; }
 .copy-btn.copied { border-color: #4caf50; color: #4caf50; }
 .copy-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
 
+.copy-chip {
+  display: block; width: 100%; text-align: left;
+  padding: 4px 8px; font-size: 12px;
+  border: 1px solid var(--border); border-radius: 4px;
+  background: var(--bg); color: var(--text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  cursor: pointer; transition: border-color 0.15s, color 0.15s;
+}
+.copy-chip:hover { border-color: var(--primary); color: var(--primary); }
+.copy-chip.copied { border-color: #4caf50; color: #4caf50; }
+
 .edit-btn {
   padding: 3px 8px; font-size: 11px; border: 1px solid var(--border);
   background: transparent; border-radius: 4px; color: var(--text-secondary);
@@ -120,10 +131,9 @@ button.primary:disabled { opacity: 0.6; cursor: not-allowed; }
   overflow: hidden; background: var(--surface);
 }
 .swatch-preview { height: 64px; width: 100%; }
-.swatch-info { padding: 8px 10px; display: flex; flex-direction: column; gap: 4px; }
+.swatch-info { padding: 8px 10px; display: flex; flex-direction: column; gap: 6px; }
 .swatch-name { font-size: 11px; color: var(--text-secondary); word-break: break-all; }
 .swatch-value { font-size: 12px; font-weight: 600; font-family: monospace; }
-.swatch-actions { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
 
 /* ── Generic token table ───────────────────────────────────────── */
 .token-table { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
@@ -139,8 +149,6 @@ button.primary:disabled { opacity: 0.6; cursor: not-allowed; }
 .token-value { font-size: 12px; font-family: monospace; color: var(--text-secondary); }
 .token-preview { display: flex; align-items: center; }
 .token-actions { display: flex; gap: 4px; flex-wrap: wrap; }
-.inline-copy { display: flex; align-items: center; gap: 6px; min-width: 0; }
-.inline-copy .token-value { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ── Typography specimens ──────────────────────────────────────── */
 .type-specimen {
