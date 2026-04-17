@@ -1,0 +1,10 @@
+{
+  "transitions": {
+    "easing": {
+      "easeInOut": { "$value": "cubic-bezier(0.4, 0, 0.2, 1)", "$type": "cubicBezier" },
+      "easeOut":   { "$value": "cubic-bezier(0.0, 0, 0.2, 1)", "$type": "cubicBezier" },
+      "easeIn":    { "$value": "cubic-bezier(0.4, 0, 1, 1)",   "$type": "cubicBezier" },
+      "sharp":     { "$value": "cubic-bezier(0.4, 0, 0.6, 1)", "$type": "cubicBezier" }
+    }
+  }
+}

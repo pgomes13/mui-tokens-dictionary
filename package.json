@@ -1,0 +1,16 @@
+{
+  "name": "mui-tokens-dictionary",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsx scripts/build.ts"
+  },
+  "dependencies": {
+    "style-dictionary": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "~5.8.3"
+  }
+}

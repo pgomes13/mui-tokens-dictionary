@@ -1,0 +1,9 @@
+{
+  "breakpoints": {
+    "xs": { "$value": "0px",    "$type": "dimension" },
+    "sm": { "$value": "600px",  "$type": "dimension" },
+    "md": { "$value": "900px",  "$type": "dimension" },
+    "lg": { "$value": "1200px", "$type": "dimension" },
+    "xl": { "$value": "1536px", "$type": "dimension" }
+  }
+}

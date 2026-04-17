@@ -1,0 +1,11 @@
+{
+  "typography": {
+    "fontFamily":        { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+    "fontSize":          { "$value": "14px", "$type": "dimension" },
+    "htmlFontSize":      { "$value": "16px", "$type": "dimension" },
+    "fontWeightLight":   { "$value": "300", "$type": "fontWeight" },
+    "fontWeightRegular": { "$value": "400", "$type": "fontWeight" },
+    "fontWeightMedium":  { "$value": "500", "$type": "fontWeight" },
+    "fontWeightBold":    { "$value": "700", "$type": "fontWeight" }
+  }
+}

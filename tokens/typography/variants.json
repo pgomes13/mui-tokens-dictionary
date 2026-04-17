@@ -1,0 +1,95 @@
+{
+  "typography": {
+    "h1": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "300", "$type": "fontWeight" },
+      "fontSize":      { "$value": "6rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.167", "$type": "number" },
+      "letterSpacing": { "$value": "-0.01562em", "$type": "dimension" }
+    },
+    "h2": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "300", "$type": "fontWeight" },
+      "fontSize":      { "$value": "3.75rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.2", "$type": "number" },
+      "letterSpacing": { "$value": "-0.00833em", "$type": "dimension" }
+    },
+    "h3": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "400", "$type": "fontWeight" },
+      "fontSize":      { "$value": "3rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.167", "$type": "number" },
+      "letterSpacing": { "$value": "0em", "$type": "dimension" }
+    },
+    "h4": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "400", "$type": "fontWeight" },
+      "fontSize":      { "$value": "2.125rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.235", "$type": "number" },
+      "letterSpacing": { "$value": "0.00735em", "$type": "dimension" }
+    },
+    "h5": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "400", "$type": "fontWeight" },
+      "fontSize":      { "$value": "1.5rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.334", "$type": "number" },
+      "letterSpacing": { "$value": "0em", "$type": "dimension" }
+    },
+    "h6": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "500", "$type": "fontWeight" },
+      "fontSize":      { "$value": "1.25rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.6", "$type": "number" },
+      "letterSpacing": { "$value": "0.0075em", "$type": "dimension" }
+    },
+    "subtitle1": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "400", "$type": "fontWeight" },
+      "fontSize":      { "$value": "1rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.75", "$type": "number" },
+      "letterSpacing": { "$value": "0.00938em", "$type": "dimension" }
+    },
+    "subtitle2": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "500", "$type": "fontWeight" },
+      "fontSize":      { "$value": "0.875rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.57", "$type": "number" },
+      "letterSpacing": { "$value": "0.00714em", "$type": "dimension" }
+    },
+    "body1": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "400", "$type": "fontWeight" },
+      "fontSize":      { "$value": "1rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.5", "$type": "number" },
+      "letterSpacing": { "$value": "0.00938em", "$type": "dimension" }
+    },
+    "body2": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "400", "$type": "fontWeight" },
+      "fontSize":      { "$value": "0.875rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.43", "$type": "number" },
+      "letterSpacing": { "$value": "0.01071em", "$type": "dimension" }
+    },
+    "button": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "500", "$type": "fontWeight" },
+      "fontSize":      { "$value": "0.875rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.75", "$type": "number" },
+      "letterSpacing": { "$value": "0.02857em", "$type": "dimension" }
+    },
+    "caption": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "400", "$type": "fontWeight" },
+      "fontSize":      { "$value": "0.75rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "1.66", "$type": "number" },
+      "letterSpacing": { "$value": "0.03333em", "$type": "dimension" }
+    },
+    "overline": {
+      "fontFamily":    { "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif", "$type": "fontFamily" },
+      "fontWeight":    { "$value": "400", "$type": "fontWeight" },
+      "fontSize":      { "$value": "0.75rem", "$type": "dimension" },
+      "lineHeight":    { "$value": "2.66", "$type": "number" },
+      "letterSpacing": { "$value": "0.08333em", "$type": "dimension" }
+    }
+  }
+}

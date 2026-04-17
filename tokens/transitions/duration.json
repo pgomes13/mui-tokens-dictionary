@@ -1,0 +1,13 @@
+{
+  "transitions": {
+    "duration": {
+      "shortest":       { "$value": "150ms", "$type": "duration" },
+      "shorter":        { "$value": "200ms", "$type": "duration" },
+      "short":          { "$value": "250ms", "$type": "duration" },
+      "standard":       { "$value": "300ms", "$type": "duration" },
+      "complex":        { "$value": "375ms", "$type": "duration" },
+      "enteringScreen": { "$value": "225ms", "$type": "duration" },
+      "leavingScreen":  { "$value": "195ms", "$type": "duration" }
+    }
+  }
+}

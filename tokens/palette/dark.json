@@ -1,0 +1,92 @@
+{
+  "palette": {
+    "primary": {
+      "main":               { "$value": "#90caf9", "$type": "color" },
+      "light":              { "$value": "#e3f2fd", "$type": "color" },
+      "dark":               { "$value": "#42a5f5", "$type": "color" },
+      "contrastText":       { "$value": "rgba(0, 0, 0, 0.87)", "$type": "color" },
+      "mainChannel":        { "$value": "144 202 249", "$type": "color" },
+      "lightChannel":       { "$value": "227 242 253", "$type": "color" },
+      "darkChannel":        { "$value": "66 165 245", "$type": "color" },
+      "contrastTextChannel":{ "$value": "0 0 0", "$type": "color" }
+    },
+    "secondary": {
+      "main":               { "$value": "#ce93d8", "$type": "color" },
+      "light":              { "$value": "#f3e5f5", "$type": "color" },
+      "dark":               { "$value": "#ab47bc", "$type": "color" },
+      "contrastText":       { "$value": "rgba(0, 0, 0, 0.87)", "$type": "color" },
+      "mainChannel":        { "$value": "206 147 216", "$type": "color" },
+      "lightChannel":       { "$value": "243 229 245", "$type": "color" },
+      "darkChannel":        { "$value": "171 71 188", "$type": "color" },
+      "contrastTextChannel":{ "$value": "0 0 0", "$type": "color" }
+    },
+    "error": {
+      "main":               { "$value": "#f44336", "$type": "color" },
+      "light":              { "$value": "#e57373", "$type": "color" },
+      "dark":               { "$value": "#d32f2f", "$type": "color" },
+      "contrastText":       { "$value": "#ffffff", "$type": "color" },
+      "mainChannel":        { "$value": "244 67 54", "$type": "color" },
+      "lightChannel":       { "$value": "229 115 115", "$type": "color" },
+      "darkChannel":        { "$value": "211 47 47", "$type": "color" },
+      "contrastTextChannel":{ "$value": "255 255 255", "$type": "color" }
+    },
+    "warning": {
+      "main":               { "$value": "#ffa726", "$type": "color" },
+      "light":              { "$value": "#ffb74d", "$type": "color" },
+      "dark":               { "$value": "#f57c00", "$type": "color" },
+      "contrastText":       { "$value": "rgba(0, 0, 0, 0.87)", "$type": "color" },
+      "mainChannel":        { "$value": "255 167 38", "$type": "color" },
+      "lightChannel":       { "$value": "255 183 77", "$type": "color" },
+      "darkChannel":        { "$value": "245 124 0", "$type": "color" },
+      "contrastTextChannel":{ "$value": "0 0 0", "$type": "color" }
+    },
+    "info": {
+      "main":               { "$value": "#29b6f6", "$type": "color" },
+      "light":              { "$value": "#4fc3f7", "$type": "color" },
+      "dark":               { "$value": "#0288d1", "$type": "color" },
+      "contrastText":       { "$value": "rgba(0, 0, 0, 0.87)", "$type": "color" },
+      "mainChannel":        { "$value": "41 182 246", "$type": "color" },
+      "lightChannel":       { "$value": "79 195 247", "$type": "color" },
+      "darkChannel":        { "$value": "2 136 209", "$type": "color" },
+      "contrastTextChannel":{ "$value": "0 0 0", "$type": "color" }
+    },
+    "success": {
+      "main":               { "$value": "#66bb6a", "$type": "color" },
+      "light":              { "$value": "#81c784", "$type": "color" },
+      "dark":               { "$value": "#388e3c", "$type": "color" },
+      "contrastText":       { "$value": "rgba(0, 0, 0, 0.87)", "$type": "color" },
+      "mainChannel":        { "$value": "102 187 106", "$type": "color" },
+      "lightChannel":       { "$value": "129 199 132", "$type": "color" },
+      "darkChannel":        { "$value": "56 142 60", "$type": "color" },
+      "contrastTextChannel":{ "$value": "0 0 0", "$type": "color" }
+    },
+    "text": {
+      "primary":            { "$value": "#ffffff", "$type": "color" },
+      "secondary":          { "$value": "rgba(255, 255, 255, 0.7)", "$type": "color" },
+      "disabled":           { "$value": "rgba(255, 255, 255, 0.5)", "$type": "color" },
+      "primaryChannel":     { "$value": "255 255 255", "$type": "color" },
+      "secondaryChannel":   { "$value": "255 255 255", "$type": "color" }
+    },
+    "background": {
+      "default":            { "$value": "#121212", "$type": "color" },
+      "paper":              { "$value": "#121212", "$type": "color" },
+      "defaultChannel":     { "$value": "18 18 18", "$type": "color" },
+      "paperChannel":       { "$value": "18 18 18", "$type": "color" }
+    },
+    "divider":              { "$value": "rgba(255, 255, 255, 0.12)", "$type": "color" },
+    "dividerChannel":       { "$value": "255 255 255", "$type": "color" },
+    "action": {
+      "active":             { "$value": "#ffffff", "$type": "color" },
+      "hover":              { "$value": "rgba(255, 255, 255, 0.08)", "$type": "color" },
+      "hoverOpacity":       { "$value": "0.08", "$type": "number" },
+      "selected":           { "$value": "rgba(255, 255, 255, 0.16)", "$type": "color" },
+      "selectedOpacity":    { "$value": "0.16", "$type": "number" },
+      "disabled":           { "$value": "rgba(255, 255, 255, 0.3)", "$type": "color" },
+      "disabledBackground": { "$value": "rgba(255, 255, 255, 0.12)", "$type": "color" },
+      "disabledOpacity":    { "$value": "0.38", "$type": "number" },
+      "focus":              { "$value": "rgba(255, 255, 255, 0.12)", "$type": "color" },
+      "focusOpacity":       { "$value": "0.12", "$type": "number" },
+      "activatedOpacity":   { "$value": "0.24", "$type": "number" }
+    }
+  }
+}

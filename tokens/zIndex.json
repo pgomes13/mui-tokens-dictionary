@@ -1,0 +1,12 @@
+{
+  "zIndex": {
+    "mobileStepper": { "$value": "1000", "$type": "number" },
+    "fab":           { "$value": "1050", "$type": "number" },
+    "speedDial":     { "$value": "1050", "$type": "number" },
+    "appBar":        { "$value": "1100", "$type": "number" },
+    "drawer":        { "$value": "1200", "$type": "number" },
+    "modal":         { "$value": "1300", "$type": "number" },
+    "snackbar":      { "$value": "1400", "$type": "number" },
+    "tooltip":       { "$value": "1500", "$type": "number" }
+  }
+}
