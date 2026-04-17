@@ -4,3 +4,5 @@ build/
 site/node_modules/
 site/dist/
 site/src/**/*.js
+site/.env
+site/.env.local

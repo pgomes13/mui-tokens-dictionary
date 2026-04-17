@@ -1,7 +1,7 @@
 import { Octokit } from '@octokit/rest'
 
-const OWNER = 'pgomes13'
-const REPO = 'mui-tokens-dictionary'
+const OWNER = import.meta.env.VITE_GITHUB_OWNER as string
+const REPO = import.meta.env.VITE_GITHUB_REPO as string
 
 export function createOctokit(pat: string): Octokit {
   return new Octokit({ auth: pat })
