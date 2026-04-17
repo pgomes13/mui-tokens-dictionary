@@ -18,10 +18,10 @@ export function SpacingSection({ tokens }: Props) {
               <div className="spacing-bar-wrap">
                 <div className="spacing-bar" style={{ width: `${Math.min(px, 160)}px` }} />
               </div>
-              <span className="spacing-value">{t.value}</span>
-              <div className="token-actions">
-                <CopyButton value={t.value} label="Explore" />
-              </div>
+              <span className="inline-copy">
+                <span className="spacing-value">{t.value}</span>
+                <CopyButton value={t.value} label="Copy" />
+              </span>
             </div>
           )
         })}

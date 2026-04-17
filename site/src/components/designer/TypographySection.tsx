@@ -38,18 +38,24 @@ export function TypographySection({ tokens }: Props) {
 
       <div className="token-table">
         <div className="token-table-header">
-          <span>Token</span><span>Value</span><span>Copy</span>
+          <span>Token</span><span>Value</span><span>CSS Variable</span>
         </div>
-        {baseTokens.map(t => (
-          <div key={t.path.join('.')} className="token-row">
-            <span className="token-name">{t.path.filter(s => s !== 'DEFAULT').join('.')}</span>
-            <span className="token-value">{t.value}</span>
-            <div className="token-actions">
-              <CopyButton value={t.value} label="Explore" />
-              <CopyButton value={toCssVar(t.path)} label="CSS" />
+        {baseTokens.map(t => {
+          const cssVar = toCssVar(t.path)
+          return (
+            <div key={t.path.join('.')} className="token-row">
+              <span className="token-name">{t.path.filter(s => s !== 'DEFAULT').join('.')}</span>
+              <span className="inline-copy">
+                <span className="token-value">{t.value}</span>
+                <CopyButton value={t.value} label="Copy" />
+              </span>
+              <span className="inline-copy">
+                <code className="token-value">{cssVar}</code>
+                <CopyButton value={cssVar} label="Copy" />
+              </span>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
 
       <h3>Variants</h3>
