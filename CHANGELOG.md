@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.2.2...v1.3.0) (2026-04-17)
+
+
+### Features
+
+* add edit-token and remove-token skills, update all skills to build site ([0676a02](https://github.com/pgomes13/mui-tokens-dictionary/commit/0676a02d941707526530862529536d5a3fa23cbe))
+
 ## [1.2.2](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.2.1...v1.2.2) (2026-04-17)
 
 
