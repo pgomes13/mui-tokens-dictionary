@@ -125,7 +125,8 @@ button.primary:disabled { opacity: 0.6; cursor: not-allowed; }
 
 /* ── Color swatches ────────────────────────────────────────────── */
 .color-group { margin-bottom: 24px; }
-.swatches-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+.swatches-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.swatch-info .copy-chip { white-space: normal; overflow: visible; text-overflow: unset; width: 100%; }
 .color-swatch {
   border: 1px solid var(--border); border-radius: var(--radius);
   overflow: hidden; background: var(--surface);
