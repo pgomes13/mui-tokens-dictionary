@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.3.0...v1.4.0) (2026-04-17)
+
+
+### Bug Fixes
+
+* update JS usage snippet to import from 'mui-tokens-dictionary' ([95d07b2](https://github.com/pgomes13/mui-tokens-dictionary/commit/95d07b239bdf92bb3dbdb4295e83fba922a1cfd4))
+
+
+### Features
+
+* make npm publish manual via workflow_dispatch ([ab9035d](https://github.com/pgomes13/mui-tokens-dictionary/commit/ab9035d082f9d64b8bfe7cb323ab6d4b92ccce9f))
+* publish package to npm via semantic-release ([2fcae20](https://github.com/pgomes13/mui-tokens-dictionary/commit/2fcae207fb24b48bba2994c6189a1ea645871e05))
+
 # [1.3.0](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.2.2...v1.3.0) (2026-04-17)
 
 
