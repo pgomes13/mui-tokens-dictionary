@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.0.1...v1.1.0) (2026-04-17)
+
+
+### Features
+
+* add versioned footer linking to GitHub release changelog ([6fdfb0b](https://github.com/pgomes13/mui-tokens-dictionary/commit/6fdfb0b28fd2ae1f6700335bfb3e5167c856be95))
+
 ## [1.0.1](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.0.0...v1.0.1) (2026-04-17)
 
 
