@@ -1,4 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-export function NavBar({ view, onViewChange, theme, onThemeToggle, isPatSet, onPatClick }) {
-    return (_jsxs("nav", { className: "navbar", children: [_jsx("span", { className: "navbar-brand", children: "MUI Token Dictionary" }), _jsxs("div", { className: "view-toggle", children: [_jsx("button", { className: view === 'designer' ? 'active' : '', onClick: () => onViewChange('designer'), children: "Designers" }), _jsx("button", { className: view === 'developer' ? 'active' : '', onClick: () => onViewChange('developer'), children: "Developers" })] }), _jsxs("div", { className: "navbar-actions", children: [_jsx("button", { className: "icon-btn", onClick: onThemeToggle, title: "Toggle theme", children: theme === 'light' ? '🌙' : '☀️' }), _jsx("button", { className: `icon-btn pat-btn${isPatSet ? ' pat-set' : ''}`, onClick: onPatClick, title: "GitHub PAT", children: isPatSet ? '🔑' : '🔒' })] })] }));
-}

@@ -3,3 +3,4 @@ build/
 *.tgz
 site/node_modules/
 site/dist/
+site/src/**/*.js

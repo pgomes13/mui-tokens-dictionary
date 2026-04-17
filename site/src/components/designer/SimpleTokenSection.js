@@ -1,6 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { CopyButton } from '@/components/common/CopyButton';
-import { toCssVar } from '@/lib/tokenUtils';
-export function SimpleTokenSection({ id, title, tokens, onEdit, renderPreview }) {
-    return (_jsxs("section", { id: id, className: "token-section", children: [_jsx("h2", { children: title }), _jsxs("div", { className: "token-table", children: [_jsxs("div", { className: "token-table-header", children: [_jsx("span", { children: "Token" }), renderPreview && _jsx("span", { children: "Preview" }), _jsx("span", { children: "Value" }), _jsx("span", { children: "Actions" })] }), tokens.map(t => (_jsxs("div", { className: "token-row", children: [_jsx("span", { className: "token-name", children: t.path.filter(s => s !== 'DEFAULT').join('.') }), renderPreview && _jsx("span", { className: "token-preview", children: renderPreview(t) }), _jsx("span", { className: "token-value", children: t.value }), _jsxs("div", { className: "token-actions", children: [_jsx(CopyButton, { value: t.value, label: "Value" }), _jsx(CopyButton, { value: toCssVar(t.path), label: "CSS" }), onEdit && _jsx("button", { className: "edit-btn", onClick: () => onEdit(t), children: "Edit" })] })] }, t.path.join('.'))))] })] }));
-}
