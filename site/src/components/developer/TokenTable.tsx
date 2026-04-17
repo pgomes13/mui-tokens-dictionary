@@ -4,10 +4,11 @@ import { toCssVar, toJsName } from '@/lib/tokenUtils'
 
 interface Props {
   tokens: FlatToken[]
+  selectedToken?: FlatToken | null
   onSelect?: (token: FlatToken) => void
 }
 
-export function TokenTable({ tokens, onSelect }: Props) {
+export function TokenTable({ tokens, selectedToken, onSelect }: Props) {
   if (tokens.length === 0) return <p className="empty">No tokens found.</p>
 
   return (
@@ -21,6 +22,7 @@ export function TokenTable({ tokens, onSelect }: Props) {
       {tokens.map(t => {
         const cssVar = toCssVar(t.path)
         const jsName = toJsName(t.path)
+        const isSelected = selectedToken?.path.join('.') === t.path.join('.') && selectedToken?.fileKey === t.fileKey
         return (
           <div key={`${t.fileKey}:${t.path.join('.')}`} className="dev-token-row" onClick={() => onSelect?.(t)}>
             <span className="css-var">
@@ -36,7 +38,12 @@ export function TokenTable({ tokens, onSelect }: Props) {
               {t.value}
             </span>
             <span className="token-actions">
-              <CopyButton value={t.value} label="Value" />
+              <button
+                className={`copy-btn${isSelected ? ' active' : ''}`}
+                onClick={e => { e.stopPropagation(); onSelect?.(t) }}
+              >
+                Explore
+              </button>
             </span>
           </div>
         )

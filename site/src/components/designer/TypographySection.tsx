@@ -45,7 +45,7 @@ export function TypographySection({ tokens }: Props) {
             <span className="token-name">{t.path.filter(s => s !== 'DEFAULT').join('.')}</span>
             <span className="token-value">{t.value}</span>
             <div className="token-actions">
-              <CopyButton value={t.value} label="Value" />
+              <CopyButton value={t.value} label="Explore" />
               <CopyButton value={toCssVar(t.path)} label="CSS" />
             </div>
           </div>

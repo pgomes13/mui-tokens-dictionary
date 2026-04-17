@@ -37,7 +37,7 @@ export function DeveloperPage({ data, activeCategory }: Props) {
         <SearchBar value={search} onChange={setSearch} />
       </div>
       <div className="dev-layout">
-        <TokenTable tokens={filtered} onSelect={setSelectedToken} />
+        <TokenTable tokens={filtered} selectedToken={selectedToken} onSelect={setSelectedToken} />
         <UsageSnippet token={selectedToken} />
       </div>
     </main>

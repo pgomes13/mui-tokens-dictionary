@@ -20,7 +20,7 @@ export function SpacingSection({ tokens }: Props) {
               </div>
               <span className="spacing-value">{t.value}</span>
               <div className="token-actions">
-                <CopyButton value={t.value} label="Value" />
+                <CopyButton value={t.value} label="Explore" />
               </div>
             </div>
           )

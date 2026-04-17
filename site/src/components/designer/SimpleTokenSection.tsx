@@ -26,7 +26,7 @@ export function SimpleTokenSection({ id, title, tokens, renderPreview }: Props) 
             {renderPreview && <span className="token-preview">{renderPreview(t)}</span>}
             <span className="token-value">{t.value}</span>
             <div className="token-actions">
-              <CopyButton value={t.value} label="Value" />
+              <CopyButton value={t.value} label="Explore" />
               <CopyButton value={toCssVar(t.path)} label="CSS" />
             </div>
           </div>
