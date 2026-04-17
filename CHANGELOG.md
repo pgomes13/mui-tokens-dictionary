@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.4.0...v1.5.0) (2026-04-17)
+
+
+### Bug Fixes
+
+* wider color swatches, no text cutoff, sort swatches by hue ([fbb7bd9](https://github.com/pgomes13/mui-tokens-dictionary/commit/fbb7bd9a0936e1470d880e81b0d17954c010723b))
+
+
+### Features
+
+* add update-docs skill for keeping README and CLAUDE.md in sync ([be44878](https://github.com/pgomes13/mui-tokens-dictionary/commit/be44878bf3cedb5fe580a6cd405f0d260bc15456))
+
 # [1.4.0](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.3.0...v1.4.0) (2026-04-17)
 
 

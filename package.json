@@ -1,6 +1,6 @@
 {
   "name": "mui-tokens-dictionary",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "type": "module",
   "main": "./build/tokens.js",
   "types": "./build/tokens.d.ts",
