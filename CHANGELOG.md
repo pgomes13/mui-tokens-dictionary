@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.2.0...v1.2.1) (2026-04-17)
+
+
+### Bug Fixes
+
+* trigger site deploy via workflow_run after Release completes ([477c194](https://github.com/pgomes13/mui-tokens-dictionary/commit/477c194a379a55d251cc92982c4563b916444334))
+
 # [1.2.0](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.1.0...v1.2.0) (2026-04-17)
 
 
