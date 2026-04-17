@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.1.0...v1.2.0) (2026-04-17)
+
+
+### Features
+
+* show usage snippet in modal instead of side panel ([c58e7ea](https://github.com/pgomes13/mui-tokens-dictionary/commit/c58e7ea20fab6cd362e1d59a9deabc411c2e5e75))
+
 # [1.1.0](https://github.com/pgomes13/mui-tokens-dictionary/compare/v1.0.1...v1.1.0) (2026-04-17)
 
 
